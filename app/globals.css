@@ -15,7 +15,7 @@
         @apply flex items-start justify-center;
     }
 }
-
+    
 @layer components {
     .cart-btn {
         @apply flex items-center justify-center size-10 rounded-full bg-dark-100;
