@@ -9,7 +9,8 @@ const SignIn = () => {
   const [form, setForm] = useState({ email: '', password: '' });
 
   const submit = async () => {
-    if (!form.email || !form.password) {
+    const {email , password} = form
+    if (!email || !password) {
        return   Alert.alert('Error', 'Please enter a valid email and password');
     }
 
@@ -17,7 +18,9 @@ const SignIn = () => {
     try {
       // Call Appwrite Sign In Function here
 
-      Alert.alert('Success', 'User signed in successfully');
+      // await signIn({email, password})
+
+
       router.replace('/');
     } catch (error: any) {
       Alert.alert('Error', error.message);
